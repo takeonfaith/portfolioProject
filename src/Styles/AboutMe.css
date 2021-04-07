@@ -1,0 +1,152 @@
+.AboutMe{
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	top: 200px;
+}
+
+.AboutMe img{
+	position: absolute;
+	width: 5419.15px;
+	height: 3475.96px;
+	left: -4199.39px;
+	top: -400px;
+	transform: rotate(7deg);
+	transform: scale(.8);
+	z-index: -1;
+}
+
+.AboutMe h1{
+	margin-bottom: 20px;
+	color:rgb(255, 255, 255);
+}
+
+.CardWrapper{
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 30px;
+	max-width: 428px;
+	width: 100%;
+	position: relative;
+}
+
+.CardItem{
+	width: 200px;
+	height: 200px;
+	border-radius: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin: 7px;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0 10px black;
+	cursor: pointer;
+	transition: .3s;
+	opacity: 0;
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+		transform: scale(0.9) translateY(30px);
+	}
+	50%{
+		opacity: 1;
+		transform: scale(.94) translateY(-10px);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1) translateY(0px);
+	}
+}
+
+@keyframes nofadeIn{
+	0%{
+		opacity: 1;
+		transform: scale(1) translateY(0px);
+	}
+	50%{
+		opacity: 1;
+		transform: scale(.94) translateY(30px);
+	}
+	100%{
+		opacity: 0;
+		transform: scale(0.9) translateY(-30px);
+	}
+}
+
+
+.CardItem:nth-child(1){
+	background: linear-gradient(135deg, rgba(241, 184, 98, 0.83) 0%, rgba(224, 105, 191, 0.65) 100%);
+}
+
+.CardItem:nth-child(2){
+	background: linear-gradient(226.47deg, #FE7F7F 1.08%, #B467C0 100%);
+}
+
+.CardItem:nth-child(3){
+	width: 100%;
+	background: linear-gradient(103.22deg, rgba(115, 129, 255, 0.9) 0%, rgba(93, 103, 199, 0.891) 100%);
+}
+
+.CardItem:nth-child(4){
+	background: linear-gradient(135deg, rgba(144, 241, 98, 0.83) 0%, rgba(105, 195, 224, 0.65) 100%);
+}
+
+.CardItem:nth-child(5){
+	background: linear-gradient(226.47deg, rgba(247, 178, 76, 0.83) 1.08%, #E2E995 100%);
+}
+
+.CardItem:hover{
+	filter:brightness(1.2);
+	transform: scale(1.01);
+}
+
+.CardItem:hover > .circle1{
+	transform: translate(200%, 20%);
+}
+
+.CardItem:hover > .circle2{
+	transform: translate(30%, 10%);
+}
+
+.circle1, .circle2{
+	background: rgba(255, 255, 255, 0.35);
+	opacity: 0.4;
+	position: absolute;
+	border-radius: 50%;
+	transition: 1s;
+}
+
+.circle1{
+	top: 0;
+	left: -30%;
+	width: 100px;
+	height: 100px;
+}
+
+.circle2{
+	width: 200px;
+	height: 200px;
+	bottom: -20%;
+	left: -20%;
+}
+
+@media all and (max-width:1000px){
+	.AboutMe{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	
+	}
+
+	.CardItem{
+		width: calc(50% - 14px);
+	}
+}
+

@@ -1,0 +1,140 @@
+.Footer{
+	width: 100%;
+	border: none;
+	position: relative;
+	left: 0;
+	bottom: 0;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+}
+
+.Footer img{
+	position: absolute;
+	bottom: 0;
+	width: 125%;
+	height: 100%;
+	left: -15%;
+	transition: .4s;
+}
+
+.Footer h1{
+	position: absolute;
+	transition: .3s;
+	color:#fff;
+
+}
+
+.FooterDataWrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	height: 300px;
+	width: 300px;
+	transition: 1s;
+	max-height: 300px;
+	max-width: 300px;
+	margin-top: 300px;
+	z-index: 2;
+	animation-delay: 1s;
+}
+
+.bgCircles{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.circle{
+	width: 90%;
+	height: 90%;
+	position: absolute;
+	box-shadow: 0 0 5px  #707df279;
+	background: #707df279;
+
+}
+
+.circle:nth-child(1){
+	animation: rotatino 10s infinite;
+	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+}
+
+.circle:nth-child(2){
+	animation: rotatino 15s infinite;
+	border-radius: 68% 32% 67% 33% / 30% 62% 38% 70%  ;
+}
+
+.circle:nth-child(3){
+	animation: rotatino 25s infinite;
+	border-radius: 60% 40% 69% 31% / 44% 31% 69% 56% ;
+}
+
+.circle:nth-child(4){
+	animation: rotatino 45s infinite;
+	border-radius: 27% 73% 67% 33% / 67% 37% 63% 33%  ;
+}
+
+@keyframes footerPopUp{
+	0%{
+		transform: translateY(130px) scale(1.1);
+		opacity: 0;
+	}
+	50%{
+		transform: translateY(-20px) scale(.9);
+		opacity: 1;
+	}
+	100%{
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes nofooterPopUp{
+	0%{
+		transform: translateY(0) scale(1);
+		opacity: 1;
+		filter:blur(0px);
+		
+	}
+	100%{
+		transform: translateY(30px) scale(0.9);
+		opacity: 0;
+		filter:blur(4px);
+	}
+}
+
+@keyframes rotatino{
+	0%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(360deg);
+	}
+}
+
+.FooterDataWrapper h3{
+	color:#fff;
+	position: relative;
+	text-shadow: 0 0 10px;
+}
+
+@media all and (max-width: 300px){
+	.FooterDataWrapper h3{
+		font-size: .8em;
+	}
+
+	.FooterDataWrapper{
+		margin-top: 150px;
+	}
+
+	.circle{
+		width: 60%;
+		height: 60%;
+	}
+}

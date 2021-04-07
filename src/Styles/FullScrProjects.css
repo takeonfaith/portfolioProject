@@ -1,0 +1,122 @@
+.FullScrProjects{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: rgb(48, 48, 48);
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	z-index: 10;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	transition: .5s;
+	
+
+}
+
+.FullScrImgRow{
+	width: 600%;
+	padding: 10px 23.5%;
+	position: relative;
+	display: flex;	
+	align-items: center;
+}
+
+.FullScrImgRow h2{
+	color: #fff;
+	position: absolute;
+	left: 3.5%;
+	bottom: 7.5%;
+	background-image: linear-gradient(-225deg, #673ab7 0%, #512da8 100%);
+	padding: 7px;
+	border-radius: 10px ;
+}
+
+.FullScrImgItem{
+	width: 9%;
+	transition: .6s;
+}
+
+.FullScrImgItem img{
+	border-radius: 20px;
+	width: 100%;
+	transition: .6s;
+}
+
+.FullScrImgRow button{
+	position: absolute;
+	border:none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(130, 98, 243);
+	opacity: .9;
+	cursor: pointer;
+	transition: .3s;
+	z-index: 12;
+}
+
+.FullScrImgRow button:hover{
+	background: rgb(159, 133, 255);
+}
+
+button img{
+	filter: invert(1);
+	display: flex;
+	width: 30px;
+}
+
+.rightBtn{
+	left: 14%;
+}
+.leftBtn{
+	left: 1.5%;
+}
+
+.fullProjectsCloseBtn{
+	border:none;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0;
+	transition: .3s;
+	cursor: pointer;
+	outline: none;
+}
+
+.fullProjectsCloseBtn:hover{
+	background: #464646;
+}
+
+@media all and (max-width: 1000px){
+	.FullScrImgRow{
+		padding: 10px 5%;
+	}
+
+	.FullScrImgItem{
+		width: 15%;
+	}
+	.FullScrImgItem img{
+		width: 100%;
+	}
+
+	.FullScrImgRow h2{
+		left: 1%;
+		font-size: 1em;
+	}
+
+	.leftBtn{
+		left: .6%;
+	}
+
+	.rightBtn{
+		left: 14.2%;
+	}
+}

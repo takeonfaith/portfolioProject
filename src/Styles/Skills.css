@@ -1,0 +1,162 @@
+.Skills{
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	color:#fff;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+
+.WrapperAndTitle{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.DefinitionOfColor{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	
+}
+
+.DefinitionOfColor h5{
+	display: flex;
+	margin: 5px;
+	align-items: center;
+}
+
+.DefinitionOfColor h5:before{
+	content:"";
+	display: block;
+	width: 5px;
+	height: 5px;
+	border-radius: 20px;
+	float: left;
+	margin-right: 10px;
+}
+
+.DefinitionOfColor h5:nth-child(3):before{
+	background: #e75250e8;
+}
+
+.DefinitionOfColor h5:nth-child(2):before{
+	background: #ebb85b;
+}
+
+.DefinitionOfColor h5:nth-child(1):before{
+	background: #02aab0;
+}
+
+.SkillWrapper{
+	display: flex;
+}
+
+.SkillItem{
+	width: 170px;
+	height: 100px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.164);
+	border: 5px solid rgba(255, 255, 255, 0.075);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+}
+
+.SkillItem img{
+	max-width: 60px;
+	width: 50px;
+	border-radius: 10px;
+}
+
+.SkillContainer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.SkillScale{
+	margin-top: 50px;
+	width: 50%;
+	
+}
+
+.SkillScaleItem img{
+	width: 30px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 5px;
+}
+
+.ImgAndSkill{
+	display: flex;
+	align-items: center;
+}
+
+.SkillScaleItem{
+	margin: 20px 0;
+}
+
+.SkillScaleItem .Scale{
+	width: 100%;
+	height: 7px;
+	background: #fff;
+	border-radius: 2px;
+	display: block;
+}
+
+.MyLevel{
+	height: 100%;
+	border-radius: 2px;
+	display: block;
+	transition: 1s;
+}
+
+@keyframes scaleAnima{
+	0%{
+
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+@keyframes noscaleAnima{
+	0%{
+		transform: scaleX(1);
+		
+	}
+	100%{
+		transform: scaleX(0);
+	}
+}
+
+
+@media all and (max-width: 1000px){
+	.WrapperAndTitle{
+		width: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	.Skills h1{
+		margin-bottom: 20px;
+	}
+
+	.SkillScale{
+		width: 70%;
+	}
+
+	.SkillItem{
+		width: 100px;
+		height: 70px;
+	}
+}
+

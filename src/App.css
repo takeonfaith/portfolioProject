@@ -1,0 +1,47 @@
+html{
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  transition: .3s;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 3px;
+  
+} 
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(241, 241, 241);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar:hover{
+  width: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(153, 175, 250);;
+}
+
+.App{
+  padding: 0 5%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;align-items: center;
+  overflow: hidden;
+  transition: .3s;
+
+}
+
+body{
+  overflow-x: hidden;
+}
+
